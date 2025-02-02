@@ -18,4 +18,3 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 USER=$(whoami)
 usermod -aG docker $USER
 systemctl enable docker --now
-init 6
