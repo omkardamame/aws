@@ -5,7 +5,7 @@ apt install vim -y
 apt install dnsutils -y
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 apt update
-apt install ca-certificates curl
+apt install ca-certificates curl -y
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 chmod a+r /etc/apt/keyrings/docker.asc
@@ -18,3 +18,4 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 USER=$(whoami)
 usermod -aG docker $USER
 systemctl enable docker --now
+exit
