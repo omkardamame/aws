@@ -15,6 +15,5 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt update
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-USER=$(whoami)
-usermod -aG docker $USER
+usermod -aG docker admin
 systemctl enable docker --now
