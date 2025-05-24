@@ -1,7 +1,6 @@
 #!/bin/bash
 apt update
 apt install htop -y
-#apt install vim -y
 apt install dnsutils -y
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 apt update
