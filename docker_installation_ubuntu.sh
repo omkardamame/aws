@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-apt install htop vim dnsutils -y
+apt install htop vim dnsutils iputils-ping tree nano -y
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt remove $pkg; done
 apt update
 apt install ca-certificates curl gnupg -y
