@@ -15,3 +15,4 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 usermod -aG docker admin
 usermod -aG docker jenkins
 systemctl enable docker --now
+systemctl restart jenkins
